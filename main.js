@@ -77,7 +77,7 @@ function crateStartButton() {
             footer.innerHTML = "";
             setTimeout(function () {
               showBothChooses();
-            }, 3500);
+            }, 2700);
           });
         }
       }
