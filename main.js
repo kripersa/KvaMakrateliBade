@@ -12,21 +12,21 @@ let cpuScore = 0;
 let playerSpan = document.querySelector(".playerSpan");
 let CpuSpan = document.querySelector(".cpuSpan");
 let cpuImageSrcArray = [
-  "/images/cpuimages/paper.svg",
-  "/images/cpuimages/rock.svg",
-  "/images/cpuimages/scissors.svg",
+  "./images/cpuimages/paper.svg",
+  "./images/cpuimages/rock.svg",
+  "./images/cpuimages/scissors.svg",
 ];
 playerSpan.innerHTML = playerScore;
 CpuSpan.innerHTML = cpuScore;
 function createplayerimagearray() {
   let playerImageRock = document.createElement("img");
   playerImageRock.classList.add("rock");
-  playerImageRock.src = "/images/playerimages/hand-back-fist-regular.svg";
+  playerImageRock.src = "./images/playerimages/hand-back-fist-regular.svg";
   let playerImagePaper = document.createElement("img");
-  playerImagePaper.src = "/images/playerimages/hand-regular.svg";
+  playerImagePaper.src = "./images/playerimages/hand-regular.svg";
   playerImagePaper.classList.add("paper");
   let playerImageSciossos = document.createElement("img");
-  playerImageSciossos.src = "/images/playerimages/scissors.png";
+  playerImageSciossos.src = "./images/playerimages/scissors.png";
   playerImageSciossos.classList.add("scissors");
   playerImageArray.push(playerImageRock, playerImagePaper, playerImageSciossos);
 }
