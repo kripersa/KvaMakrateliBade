@@ -43,8 +43,6 @@ function crateStartButton() {
   for (let i = 0; i < buttons.length; i++) {
     let button = buttons[i];
     button.addEventListener("click", () => {
-      console.log(clicked);
-      console.log(button);
       buttons[0].classList.remove("buttonclicked");
       buttons[1].classList.remove("buttonclicked");
       buttons[2].classList.remove("buttonclicked");
@@ -79,7 +77,7 @@ function crateStartButton() {
             footer.innerHTML = "";
             setTimeout(function () {
               showBothChooses();
-            }, 7000);
+            }, 3500);
           });
         }
       }
@@ -101,7 +99,6 @@ function showBothChooses() {
   let cpuImage = document.createElement("img");
   cpuImage.src = cpuImageSrcArray[Math.floor(Math.random() * 3)];
   cpuImage.classList.add(cpuImage.src);
-
   cpuImageBox.appendChild(cpuImage);
   board.appendChild(cpuImageBox);
   let resetButton = document.createElement("button");
@@ -123,35 +120,37 @@ function showBothChooses() {
     });
   }
   function score() {
-    for (let i = 0; i < 1; i++) {
-      let player = playerChooseBox.children[i].classList[i];
-      let cpu = cpuImageBox.children[i].classList[i];
-      if (player.includes("paper") && cpu.includes("rock")) {
-        console.log("gvegirsa");
-        playerScore += 1;
-        playerSpan.innerHTML = playerScore;
-        CpuSpan.innerHTML = cpuScore;
-      } else if (player.includes("paper") && cpu.includes("scissors")) {
-        cpuScore += 1;
-        playerSpan.innerHTML = playerScore;
-        CpuSpan.innerHTML = cpuScore;
-      } else if (player.includes("rock") && cpu.includes("paper")) {
-        cpuScore += 1;
-        playerSpan.innerHTML = playerScore;
-        CpuSpan.innerHTML = cpuScore;
-      } else if (player.includes("rock") && cpu.includes("scissors")) {
-        playerScore += 1;
-        playerSpan.innerHTML = playerScore;
-        CpuSpan.innerHTML = cpuScore;
-      } else if (player.includes("scissors") && cpu.includes("paper")) {
-        playerScore += 1;
-        playerSpan.innerHTML = playerScore;
-        CpuSpan.innerHTML = cpuScore;
-      } else if (player.includes("scissors") && cpu.includes("rock")) {
-        cpuScore += 1;
-        playerSpan.innerHTML = playerScore;
-        CpuSpan.innerHTML = cpuScore;
-      }
+    let player = playerChooseBox.children[0].classList[0];
+    let cpu = cpuImageBox.children[0].classList[0];
+    if (player.includes("paper") && cpu.includes("rock")) {
+      playerScore += 1;
+      playerSpan.innerHTML = playerScore;
+      CpuSpan.innerHTML = cpuScore;
+    }
+    if (player.includes("paper") && cpu.includes("scissors")) {
+      cpuScore += 1;
+      playerSpan.innerHTML = playerScore;
+      CpuSpan.innerHTML = cpuScore;
+    }
+    if (player.includes("rock") && cpu.includes("paper")) {
+      cpuScore += 1;
+      playerSpan.innerHTML = playerScore;
+      CpuSpan.innerHTML = cpuScore;
+    }
+    if (player.includes("rock") && cpu.includes("scissors")) {
+      playerScore += 1;
+      playerSpan.innerHTML = playerScore;
+      CpuSpan.innerHTML = cpuScore;
+    }
+    if (player.includes("scissors") && cpu.includes("paper")) {
+      playerScore += 1;
+      playerSpan.innerHTML = playerScore;
+      CpuSpan.innerHTML = cpuScore;
+    }
+    if (player.includes("scissors") && cpu.includes("rock")) {
+      cpuScore += 1;
+      playerSpan.innerHTML = playerScore;
+      CpuSpan.innerHTML = cpuScore;
     }
   }
 }

@@ -76,21 +76,21 @@ img {
   width: 90%;
   height: 90%;
   animation-name: upAndDown;
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-iteration-count: 3;
-  animation-delay: 1s;
+  animation-delay: 0.5s;
 }
 
 @keyframes upAndDown {
   0% {
-    transform: translateY(50%);
+    transform: translateY(0px);
   }
 
   50% {
-    transform: translateY(-50%);
+    transform: translateY(-100px);
   }
 
   100% {
-    transform: translateY(50%);
+    transform: translateY(100px);
   }
 }
