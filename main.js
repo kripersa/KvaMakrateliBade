@@ -45,7 +45,11 @@ function crateStartButton() {
     button.addEventListener("click", () => {
       console.log(clicked);
       console.log(button);
+      buttons[0].classList.remove("buttonclicked");
+      buttons[1].classList.remove("buttonclicked");
+      buttons[2].classList.remove("buttonclicked");
       button.classList.add("buttonclicked");
+
       if (clicked == false) {
         let startingButton = document.createElement("button");
         startingButton.classList.add("startingButton");
